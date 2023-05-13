@@ -1,52 +1,44 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Main from './pages/main';
+import Welcome from './pages/welcome';
 import Login from './pages/login';
-import User from './pages/user';
+import Register from './pages/register';
 
 const Stack = createStackNavigator();
 
 export default function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator>   
+      <Stack.Screen
+                name="Welcome"
+                component={Welcome}
+                options={{ headerShown: false }}
+            />
         <Stack.Screen name="login" component={Login} options={{
           title: 'LOGIN',
           headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#3498db'
+            backgroundColor: '#38a69c'
           },
           headerTitleStyle: {
             color: '#fff',
             fontWeight: 'bold',
           }
         }} />
-        <Stack.Screen name="main" component={Main} options= {{
-          title: 'Github VIEWER',
-          headerLeft: null,
+        <Stack.Screen name="register" component={Register} options={{
+          title: 'Cadastro de usuario',
           headerTitleAlign: 'center',
           headerStyle: {
-            backgroundColor: '#3498db'
+            backgroundColor: '#38a69c'
           },
           headerTitleStyle: {
             color: '#fff',
             fontWeight: 'bold',
-          }          
+          }
+        }} />
 
-        }} />
-        <Stack.Screen name='user' component={User} options={{
-          title: 'Perfil do Usuário',
-          headerTitleAlign: 'center',
-          headerTintColor: '#fff',
-          headerStyle: {
-            backgroundColor: '#3498db'
-          },
-          headerTitleStyle: {
-            color: '#fff',
-            fontWeight: 'bold',
-          }                    
-        }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
