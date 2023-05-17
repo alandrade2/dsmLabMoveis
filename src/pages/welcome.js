@@ -20,19 +20,9 @@ export default function Welcome() {
     }, []);
 
     async function userLog() {
-        const logUser = await AsyncStorage.getItem('users');
-        console.log(logUser)
+        const logUser = await AsyncStorage.getItem('characters');
+        // console.log(logUser)
         setUser('Login');
-        /* Cadastrar os seguintes dados do usuario
-            - nome
-            - telefone
-            - cpf
-            - email
-            - curso
-            - usuario
-            - logado(sim/não)
- 
-        */
     }
 
     const navigation = useNavigation();
@@ -52,7 +42,7 @@ export default function Welcome() {
                 <Text style={styles.title}>  RICK AND MORTY</Text>
                 <Text style={styles.text}>Conheça tudo sobre a Serie</Text>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('login')}
+                    onPress={() => navigation.navigate('menu')}
                     style={styles.button}
                 >
                     <Text style={styles.buttonText}>{user}</Text>
