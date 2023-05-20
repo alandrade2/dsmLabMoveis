@@ -35,16 +35,9 @@ function Perfil(props) {
     }
 
 
-    // listar as coleções existentes
-    // const res = await AsyncStorage.getAllKeys()
-    // console.log(res)
-
-
-
     async function removeColection() {
         // Remover uma coleção inteira
         const res = await AsyncStorage.removeItem("characters")
-        // console.log(res)
     }
 
 
@@ -86,12 +79,8 @@ function Perfil(props) {
 
             const newData = await AsyncStorage.getItem("characters")
 
-            console.log(newData)
-            console.log(favorite)
-
         } catch (error) {
             console.error(error)
-            console.log("uindo pra ca")
         }
 
 

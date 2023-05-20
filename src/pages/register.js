@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Keyboard, ActivityIndicator } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// import { Keyboard, ActivityIndicator } from 'react-native';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Container, Form, Input, ProfileButton, ProfileButtonText } from '../style/styles';
 
 export default class Register extends Component {
@@ -16,28 +16,9 @@ export default class Register extends Component {
         loading: false
     };
 
-    // async componentDidMount() {
-    //   const users = await AsyncStorage.getItem('users');
-
-    //   if (users) {
-    //     this.setState({ users: JSON.parse(users) });
-    //   }
-    // }
-
-    // componentDidUpdate(_, prevState) {
-    //   const { users } = this.state;
-
-    //   if (prevState.users !== users) {
-    //     AsyncStorage.setItem('users', JSON.stringify(users));
-    //   }
-    // }
-
-
     handleAddUser = async () => {
-      const { users } = this.state;
-        console.log('estou aqui')
-        console.log(users)
-        
+        const { users } = this.state;
+
     }
 
     render() {

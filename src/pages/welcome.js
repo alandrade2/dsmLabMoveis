@@ -21,7 +21,6 @@ export default function Welcome() {
 
     async function userLog() {
         const logUser = await AsyncStorage.getItem('characters');
-        // console.log(logUser)
         setUser('Login');
     }
 
