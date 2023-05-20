@@ -153,7 +153,7 @@ export default function Person(props) {
           onChangeText={text => setNewCharacter(text)}
           returnKeyType='send'
         />
-        <SubmitButton loading={loading} onPress={() => handleListCharacters()}>
+        <SubmitButton loading={loading} onPress={() => 'handleListCharacters'()}>
           {loading ? (<ActivityIndicator color='#fff' />) : (<Icon name='search' size={20} color='#fff' />)}
         </SubmitButton>
       </Form>
